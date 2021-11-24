@@ -7,8 +7,8 @@ function getAllSensorData() {
     $stm = $pdo->prepare($sql);
     $stm->execute();
 
-    $kayttajat = $stm->fetchAll(PDO::FETCH_ASSOC);
-    return $kayttajat;
+    $allData = $stm->fetchAll(PDO::FETCH_ASSOC);
+    return $allData;
 }
 
 ?>
