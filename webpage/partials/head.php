@@ -8,5 +8,15 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/style.css" type="text/css">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    $(document).ready(function(){
+		 $(".trash_data").load("partials/load.php");
+        setInterval(function() {
+            $(".trash_data").load("partials/load.php");
+        }, 5000);
+    });
+ 
+</script>
 </head>
 <body>
