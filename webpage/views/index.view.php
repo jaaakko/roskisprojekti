@@ -18,4 +18,4 @@ foreach($allData as $sensordata): ?>
 <p>Roskan etäisyys kannesta: <?=$sensordata["value"]?></p>
 </div>
 
-<?php require "partial/footer.php"; ?>
+<?php require "partials/footer.php"; ?>
