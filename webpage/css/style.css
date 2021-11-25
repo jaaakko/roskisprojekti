@@ -6,3 +6,38 @@ body {
 .container {
     display: flex;
 }
+
+.empty {
+    height: 2vh;
+    width: 10%;
+    background-color: whitesmoke;
+    border: 1px solid black;
+}
+
+.full {
+    height: 2vh;
+    width: 10%;
+    background-color: red;
+    border: 1px solid black;
+}
+
+.almost_full {
+    height: 2vh;
+    width: 10%;
+    background-color: orange;
+    border: 1px solid black;
+}
+
+.semi_full {
+    height: 2vh;
+    width: 10%;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.almost_empty {
+    height: 2vh;
+    width: 10%;
+    background-color: #40ff00;
+    border: 1px solid black;
+}
