@@ -2,8 +2,7 @@
 
 <div class="container">
 
-<?php
-foreach($allData as $sensordata)?>
+<?php foreach($allData as $sensordata)?>
 <div class="trash_data">
 <h2>Roskan tyyppi: <?=$sensordata["type"]?></h2>
 <p>Roskan etäisyys kannesta: <?=$sensordata["value"], " " ,$sensordata["units"]?></p>
@@ -37,13 +36,7 @@ foreach($allData as $sensordata)?>
     echo "<div class='empty'></div>";
     echo "<div class='empty'></div>";
 }
-
-
 ?>
 </div>
-
-<div class="trash_unit" id="trash_unit">
-<h2>Roskan tyyppi: <?=$sensordata["type"];?></h2>
-<p>Roskan etäisyys kannesta: <?=$sensordata["value"];?></p>
 </div>
 </div>
