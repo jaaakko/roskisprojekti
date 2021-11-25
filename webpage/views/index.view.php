@@ -2,20 +2,10 @@
 
 <div class="container">
 
-<script>
+<?php foreach($allData as $sensordata);3 ?>
 
-var myVar = setInterval(myTimer, 1000);
-function myTimer() {
-  var d = new Date();
-  document.getElementById("trash_unit").innerHTML = d.toLocaleTimeString();
-}
-</script>
-
-<?php
-foreach($allData as $sensordata): ?>
 <div class="trash_unit" id="trash_unit">
-<h2>Roskan tyyppi: <?=$sensordata["type"]?></h2>
-<p>Roskan etäisyys kannesta: <?=$sensordata["value"]?></p>
+<h2>Roskan tyyppi: <?=$sensordata["type"];?></h2>
+<p>Roskan etäisyys kannesta: <?=$sensordata["value"];?></p>
 </div>
-
-<?php require "partials/footer.php"; ?>
+</div>

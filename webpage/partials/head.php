@@ -8,5 +8,13 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Syncopate&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+
+        <script>
+        var myVar = setInterval(myTimer, 1000);
+        function myTimer() {
+        document.getElementById("trash_unit").innerHTML = d.toLocaleTimeString();
+        }
+        </script>
 </head>
 <body>
