@@ -6,6 +6,7 @@ foreach($allData as $sensordata)?>
 
 <h2>Roskan tyyppi: <?=$sensordata["type"]?></h2>
 <p id="distance">Roskan etäisyys kannesta: <?=$sensordata["value"], " " ,$sensordata["units"]?></p>
+<p id="time">Viimeisin tarkistus: <?=$sensordata["time"]?></p>
 
 <?php if($sensordata["value"] <= 22) {
     echo "<div class='full'></div>";
