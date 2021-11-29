@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 24, 2021 at 01:47 PM
--- Server version: 10.3.32-MariaDB
+-- Generation Time: 29.11.2021 klo 09:54
+-- Palvelimen versio: 10.3.32-MariaDB
 -- PHP Version: 7.3.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -25,20 +25,36 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sensordata`
+-- Rakenne taululle `sensordata`
 --
 
 CREATE TABLE `sensordata` (
   `sensorID` int(11) NOT NULL,
-  `value` varchar(10) NOT NULL
+  `type` varchar(50) NOT NULL,
+  `value` int(10) NOT NULL,
+  `units` varchar(5) NOT NULL,
+  `time` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `sensordata`
+-- Vedos taulusta `sensordata`
 --
 
-INSERT INTO `sensordata` (`sensorID`, `value`) VALUES
-(1, '66 cm\r\n');
+INSERT INTO `sensordata` (`sensorID`, `type`, `value`, `units`, `time`) VALUES
+(1, 'Sekajäte', 20, 'cm', '2021-11-29 09:53:05');
+
+-- --------------------------------------------------------
+
+--
+-- Rakenne taululle `sensordata_hist`
+--
+
+CREATE TABLE `sensordata_hist` (
+  `sensorID` int(11) NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `value` varchar(10) NOT NULL,
+  `time` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
