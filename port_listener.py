@@ -1,5 +1,6 @@
 import mysql.connector
 import serial
+import datetime
 
 mydb = mysql.connector.connect(
     host="truudeli18.net",
@@ -9,8 +10,8 @@ mydb = mysql.connector.connect(
     )
 
 print(mydb);
-
 print("listening to serial port COM5")
+print("reading datetime")
 serialPort = serial.Serial(port = "COM5", baudrate=9600,
                            bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
                            
@@ -24,15 +25,18 @@ while(1):
         # Read data out of the buffer until a carraige return / new line is found
         serialString = serialPort.readline()
         value = serialString.decode('Ascii')
+        x = datetime.datetime.now()
+        y = x.strftime("%Y-%m-%d %H:%M:%S")
 
         mycursor = mydb.cursor()
         
-        sql = "UPDATE sensordata SET value='" + value + "' WHERE sensorID = 1;";
+        sql = "UPDATE sensordata SET value='" + value + "', time='" + y + "' WHERE sensorID = 1;";
         
         mycursor.execute(sql)
         mydb.commit()
 
         print(mycursor.rowcount, "record(s) affected")
         
-        # Print the contents of the serial data
+        #Print the contents of the serial data
         print(serialString.decode('Ascii'))
+        print(y)
