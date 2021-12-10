@@ -14,8 +14,10 @@
 		 $(".trash_data").load("partials/load.php");
         setInterval(function() {
             $(".trash_data").load("partials/load.php");
-        }, 1000);
+        }, 100000);
     });
+
+
  
 </script>
 </head>

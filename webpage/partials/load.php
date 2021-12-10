@@ -38,6 +38,12 @@ foreach($allData as $sensordata)?>
     echo "<div class='empty'></div>";
     echo "<div class='empty'></div>";
 }
-
-
 ?>
+<div class="chart-container">
+      <canvas id="mycanvas"></canvas>
+    </div>
+    
+    <!-- javascript -->
+    <script type="text/javascript" src="/chart/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/chart/js/Chart.min.js"></script>
+    <script type="text/javascript" src="/chart/js/linegraph.js"></script>

@@ -7,6 +7,8 @@ body {
     display: flex;
 }
 
+/*-------------Front page-------------*/
+
 .empty {
     height: 2vh;
     width: 10%;
@@ -41,3 +43,10 @@ body {
     background-color: #40ff00;
     border: 1px solid black;
 }
+
+/*-------------Line chart-------------*/
+
+.chart-container {
+    width: 640px;
+    height: auto;
+  }
