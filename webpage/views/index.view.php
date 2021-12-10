@@ -3,6 +3,9 @@
 <div class="container">
 <div class="trash_data">
 
+<div class="chart-container">
+    <canvas id="mycanvas"></canvas>
+</div>
 
 </div>
 

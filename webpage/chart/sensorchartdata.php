@@ -16,7 +16,7 @@ if(!$mysqli){
 }
 
 //query to get data from the table
-$query = sprintf("SELECT sensorID FROM sensordata_hist");
+$query = sprintf("SELECT value, units, time from sensordata_hist ORDER BY time ASC");
 
 //execute query
 $result = $mysqli->query($query);
