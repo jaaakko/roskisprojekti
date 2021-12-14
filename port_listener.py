@@ -3,15 +3,15 @@ import serial
 import datetime
 
 mydb = mysql.connector.connect(
-    #host="truudeli18.net",
-    #user="truu18_monkey",
-    #password="foRy7GfA6YTUgRtE",
-    #database="truu18_smart-trash-project"
+    host="truudeli18.net",
+    user="truu18_monkey",
+    password="foRy7GfA6YTUgRtE",
+    database="truu18_smart-trash-project"
 
-    host="localhost",
-    user="root",
-    password="",
-    database="roskis_projekti"
+    #host="localhost",
+    #user="root",
+    #password="",
+    #database="insert_database_name"
     )
 
 print(mydb);
