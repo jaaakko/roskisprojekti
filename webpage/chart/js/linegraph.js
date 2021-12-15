@@ -7,11 +7,11 @@ $(document).ready(function(){
 
       var value = [];
       var time = [];
- 
 
       for(var i in data) {
         time.push(data[i].time);
-        value.push(data[i].value);
+        value.push(data[i].height - data[i].value);
+
       }
 
       var chartdata = {
@@ -29,12 +29,25 @@ $(document).ready(function(){
           }
         ]
       };
+      
 
       var ctx = $("#mycanvas");
 
       var LineGraph = new Chart(ctx, {
         type: 'line',
-        data: chartdata
+        data: chartdata,
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                min: 0,
+                max: 100,
+                stepSize: 10,
+              }
+            }]
+          }
+        }
       });
     },
     error : function(data) {
