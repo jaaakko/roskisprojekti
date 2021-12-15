@@ -8,5 +8,5 @@
 </div>
 
 </div>
-
-<?php require "partials/footer.php"; ?>
+</div>
+</div>
