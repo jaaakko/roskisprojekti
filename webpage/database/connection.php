@@ -9,11 +9,21 @@ function connectDB(){
 }
 
 function connect() {
+
+        /*Yhteys truudelin tietokantaan */
+
         $host = getenv('DB_HOST', true) ?: "truudeli18.net";
         $port = getenv('DB_PORT', true) ?: 3306; 
         $dbname = getenv('DB_NAME', true) ?: "truu18_smart-trash-project"; 
         $user = getenv('DB_USERNAME', true) ?: "truu18_monkey"; 
         $password = getenv('DB_PASSWORD', true) ?: "foRy7GfA6YTUgRtE"; 
+
+        /*Yhteys xampp tietokantaan */
+        //$host = getenv('DB_HOST', true) ?: "localhost";
+        //$user = getenv('DB_USERNAME',true) ?: "root";
+        //$password = getenv('DB_PASSWORD', true) ?: "";
+        //$dbname = getenv('DB_NAME', true) ?: "roskis_projekti";
+        //$port = getenv('DB_PORT', true) ?: 3306;
 
         $connectionString = "mysql:host=$host;dbname=$dbname;port=$port;charset=utf8";
 

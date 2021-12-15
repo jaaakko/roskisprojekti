@@ -19,10 +19,10 @@ $(document).ready(function(){
         datasets: [
           {
             label: "Roskan määrä",
-            fill: false,
+            fill: true,
             lineTension: 0.1,
-            backgroundColor: "rgba(59, 89, 152, 0.75)",
-            borderColor: "rgba(59, 89, 152, 1)",
+            backgroundColor: "rgba(50, 220, 60, 0.75)",
+            borderColor: "rgba(98, 255, 120, 1)",
             pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
             pointHoverBorderColor: "rgba(59, 89, 152, 1)",
             data: value

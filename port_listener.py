@@ -1,6 +1,7 @@
 import mysql.connector
 import serial
 import datetime
+import time
 
 mydb = mysql.connector.connect(
     host="truudeli18.net",
@@ -15,10 +16,10 @@ mydb = mysql.connector.connect(
     )
 
 print(mydb);
-print("listening to serial port COM5")
-print("reading datetime")
 serialPort = serial.Serial(port = "COM5", baudrate=9600,
 bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
+print("listening to serial port COM5")
+print("reading datetime")
                            
 serialString = ""                           # Used to hold data coming over UART
 
@@ -39,7 +40,8 @@ while(1):
         hist_data = mycursor.fetchall()
         for row in hist_data:
                 print(row[0],row[1],row[2],row[3],row[4])
-                sql = "INSERT INTO sensordata_hist (sensorID, type, value, units, time) VALUES ('" + str(row[0]) + "', '" + str(row[1]) + "', '" + str(row[2]) + "', '" + str(row[3]) + "', '" + str(row[4]) + "');"
+
+                sql = "INSERT INTO sensordata_hist (sensorID, type, value, units, height, time) VALUES ('" + str(row[0]) + "', '" + str(row[1]) + "', '" + str(row[2]) + "', '" + str(row[3]) + "', '" + str(row[4]) + "', '" + str(row[5]) + "');"
                 mycursor.execute(sql)
                 print("Moved previous records")
         
@@ -52,3 +54,4 @@ while(1):
         #Print the contents of the serial data
         print(serialString.decode('Ascii'))
         print(y)
+        time.sleep(5)
