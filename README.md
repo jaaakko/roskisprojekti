@@ -3,6 +3,7 @@
 Sensorin lukuohjelma, joka tallentaa tietoa tietokantaan ja näyttää ne nettisivulla. Tässä repossa on kaikki tarvittavat tiedostot mitä tarvitset ohjelman käyttöön.
 
 Laitteen käyttöhjeet löytyvät alyroskiksen_kayttoonotto.docx tiedostosta.
+Arduinon koodi on "alyroskis kansiossa"
 
 # Valmiina / toimii
 - Tietojen lukeminen sensorilla
